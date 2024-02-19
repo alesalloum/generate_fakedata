@@ -17,7 +17,7 @@ For the toxic ones, for each tweet generation we sampled uniformly a toxicity cl
 
 ## Solution
 
-I used LLMs _(Mistal-7B-Instruct-v0.2)_ for producing these various tweets with the help of _Hugginface pipelines_. I created for each distinct prompt own job. The sampling parameters in the codeblock were optimal enough to my use case. So far Huggingface do not recommend using batches instead of regular for-loop for a larger number of inputs during inference. I did some very quick testing, and speed/quality remained similar. Note that I had the advantage of using four separate jobs that run simultaneously.
+I used LLMs _(Mistal-7B-Instruct-v0.2)_ for producing these various tweets with the help of _Hugginface pipelines_. I created for each distinct prompt own job. The sampling parameters in the codeblock were optimal enough for my use case. So far Huggingface does not recommend using batches instead of regular for-loop for a larger number of inputs during inference. I did some very quick testing, and speed/quality remained similar. Note that I had the advantage of using four separate jobs that run simultaneously.
 
 ```
 # Be sure you have GPU is available, you don't want to run this on CPU
